@@ -1,7 +1,12 @@
-# breadth-first-search
+# breadth-first search
 
-_Implements the breadth-first search (BFS) algorithm to get the connection path between two nodes._
+_Implements the breadth-first search (BFS) algorithm to get the connection path between two nodes in a graph._
 
+</br>
+
+#### From [Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search)
+
+</br>
 
 ## Install
 
@@ -10,7 +15,7 @@ $ npm install breadth-first-search
 ```
 
 ## The friends example
-Given: 
+Given this friendship connection graph: 
 
 ![friends](https://i.ibb.co/YTnhwGK/friends.png)
 
@@ -18,7 +23,7 @@ Given:
 
 ```javascript
 // import the lib
-const bfs = require("./bfs")
+import { bfs } from "bfs";
 
 // create a "connections" array with the given form
 /*
@@ -35,8 +40,8 @@ const bfs = require("./bfs")
 ]
 */
 
-// list all connections on the above graph
-const edgesArray = [
+// list all connections on the above friendship graph
+const friendsList = [
   {
     nodeOne: "Jhon",
     nodeTwo: "Matt",
@@ -72,10 +77,10 @@ const edgesArray = [
 ];
 
 // create a possible connection
-const connection = {
+const possibleConnection = {
   nodeOne: "Jhon", 
   nodeTwo: "Liz"
 };
 
-bfs(edgesArray, connection) // ['Jhon', 'Robert', 'Liz']
+bfs(friendsList, possibleConnection) // ['Jhon', 'Robert', 'Liz']
 ```

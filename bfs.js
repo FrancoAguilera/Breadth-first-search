@@ -1,12 +1,17 @@
-const utils = require("./utils");
+import { getGraph, getPath, uniqueNodes } from "./utils.js";
 
 // and now we have a graph map about the connections, we can apply
 // the BFS algorithm
-const bfs = (edgesList, connection) => {
-  const { nodeOne: start, nodeTwo: end } = connection;
-  const nodes = utils.uniqueNodes(edgesList);
-  const graph = utils.getGraph(nodes, edgesList);
+export const bfs = (edgesList, connection) => {
   const path = [];
+
+  if (!edgesList.length || !connection.nodeOne || !connection.nodeTwo) {
+    return "Parameters not valid.";
+  }
+
+  const { nodeOne: start, nodeTwo: end } = connection;
+  const nodes = uniqueNodes(edgesList);
+  const graph = getGraph(nodes, edgesList);
 
   // BFS algorithm
   const queue = [];
@@ -20,7 +25,7 @@ const bfs = (edgesList, connection) => {
     const current = queue.shift();
 
     if (current.node === end) {
-      return utils.getPath(current)
+      return getPath(current);
     }
 
     for (let i = 0; i < current.edges.length; i++) {
@@ -35,6 +40,3 @@ const bfs = (edgesList, connection) => {
 
   return path;
 };
-
-module.exports = bfs;
-

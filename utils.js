@@ -1,5 +1,5 @@
 // create an array with all the possible nodes on the list
-const uniqueNodes = (edgesList) => {
+export const uniqueNodes = (edgesList) => {
   let nodes = [];
   for (let i = 0; i < edgesList.length; i++) {
     nodes.push(edgesList[i].nodeOne);
@@ -10,7 +10,7 @@ const uniqueNodes = (edgesList) => {
 }
 
 // Create a Graph of nodes and the edges array assosiated to it
-const getGraph = (nodes, edgesList) => nodes.reduce((graph, node) => {
+export const getGraph = (nodes, edgesList) => nodes.reduce((graph, node) => {
   
   const edges = edgesList.reduce((connections, edge) => {
 
@@ -36,7 +36,7 @@ const getGraph = (nodes, edgesList) => nodes.reduce((graph, node) => {
 }, {});
 
 // return an array with the nodes on the connection
-const getPath = (endNode) => {
+export const getPath = (endNode) => {
   // return the connection path
   const path = [];
   path.push(endNode.node);
@@ -49,9 +49,3 @@ const getPath = (endNode) => {
 
   return path.reverse();
 };
-
-module.exports = {
-  uniqueNodes,
-  getGraph,
-  getPath
-}

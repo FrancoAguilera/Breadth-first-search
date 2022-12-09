@@ -4,8 +4,9 @@
   "description": "Apply the bfs algorith to get the connection path between two nodes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FrancoAguilera/breadth-first-search.git"
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/FrancoAguilera/breadth-first-search/issues"
   },
-  "homepage": "https://github.com/FrancoAguilera/breadth-first-search#readme"
+  "homepage": "https://github.com/FrancoAguilera/breadth-first-search#readme",
+  "devDependencies": {
+    "tap": "^16.3.2"
+  }
 }
