@@ -1,8 +1,8 @@
 {
   "name": "breadth-first-search",
-  "version": "1.0.0",
-  "description": "Apply the bfs algorith to get the connection path between two nodes",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "Apply the BFS algorith to get the connection path between two nodes",
+  "main": "bfs.js",
   "scripts": {
     "test": "tap"
   },
@@ -12,8 +12,8 @@
     "url": "git+https://github.com/FrancoAguilera/breadth-first-search.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Franco Aguilera",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/FrancoAguilera/breadth-first-search/issues"
   },

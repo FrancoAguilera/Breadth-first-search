@@ -23,7 +23,7 @@ Given this friendship connection graph:
 
 ```javascript
 // import the lib
-import { bfs } from "bfs";
+import { bfs } from "breadth-first-search";
 
 // create a "connections" array with the given form
 /*
